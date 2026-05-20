@@ -268,6 +268,7 @@ jobs:
 | `job-to-wait-for`        | string  | Name of the workflow's job to wait for (unbound by default).                                                                           |
 | `step-to-wait-for`       | string  | Name of the step to wait for (unbound by default). Requires job-to-wait-for to be set.                                                 |
 | `queue-name`             | string  | Custom substring used to group matching runs across workflows (defaults to the current workflow only).                                 |
+| `retries`                | number  | Number of times to retry GitHub API requests that fail with a transient 5xx error, using exponential backoff (defaults to 0, ie no retries) |
 
 #### outputs
 
