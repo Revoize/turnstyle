@@ -131,6 +131,8 @@ describe('input', () => {
         ['INPUT_INITIAL-WAIT-SECONDS', 'abc', /initial-wait-seconds/],
         ['INPUT_POLL-INTERVAL-SECONDS', '0', /poll-interval-seconds/],
         ['INPUT_POLL-INTERVAL-SECONDS', '5s', /poll-interval-seconds/],
+        ['INPUT_RETRIES', '-1', /retries/],
+        ['INPUT_RETRIES', 'abc', /retries/],
       ];
 
       invalidInputs.forEach(([inputName, value, expectedMessage]) => {
