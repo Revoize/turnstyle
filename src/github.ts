@@ -45,8 +45,8 @@ export class OctokitGitHub {
       baseUrl: process.env['GITHUB_API_URL'] || 'https://api.github.com',
       auth: githubToken,
       // retries defaults to 0, which disables the retry plugin entirely (no
-      // request wrapping) so the original no-retry behavior is preserved. When
-      // set, it retries transient 5xx (and network errors) with backoff.
+      // request wrapping). When set, it retries transient 5xx (and network
+      // errors) with backoff.
       // doNotRetry is the plugin's default list plus 429, so rate limits stay
       // owned by plugin-throttling above and retry only covers transient 5xx.
       retry: {
